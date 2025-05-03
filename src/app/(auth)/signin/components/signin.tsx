@@ -25,7 +25,7 @@ export default function SigninForm() {
   ];
   return (
     <>
-      <div className="flex flex-col h-full w-full gap-14 justify-center items-start ml-10 ">
+      <div className="flex flex-col h-full w-full shrink grow gap-10 justify-center pl-20 pt-10 pb-10 overflow-y-auto">
         <div className="flex flex-col gap-2 w-full">
           <div className="text-2xl font-lexend font-bold">
             Create new account !

@@ -6,8 +6,8 @@ import SigninForm from "@/app/(auth)/signin/components/signin";
 export default function Signin() {
   return (
     <>
-      <div className="flex flex-row h-screen w-full overflow-hidden">
-        <div className="bg-primary-light grow-0 shrink basis-[55%] relative overflow-hidden">
+      <div className="flex flex-row h-screen w-full">
+        <div className="bg-primary-light grow-0 shrink basis-[55%] relative">
           <div className="flex flex-col gap-2 mt-14 ml-12">
             <div className="text-3xl font-lexend text-primary font-bold">
               Join us Now !
@@ -26,7 +26,7 @@ export default function Signin() {
             style={{ transform: "scaleX(-1)" }}
           />
         </div>
-        <div className="flex flex-col grow shrink basis-[45%] justify-end items-start">
+        <div className="flex flex-col grow shrink basis-[45%] justify-center items-start">
           <Image src={logo} alt="any" className="w-48 p-3" />
           <SigninForm />
         </div>
