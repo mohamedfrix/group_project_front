@@ -42,7 +42,7 @@ const items = [
 
 export function AppSidebar() {
     return (
-        <Sidebar variant={'sidebar'} side={'left'} collapsible={'icon'}>
+        <Sidebar variant={'sidebar'} side={'left'} collapsible={'icon'} className={'z-100'}>
             <SidebarHeader />
             <SidebarContent>
                 <SidebarGroup>

@@ -3,6 +3,7 @@
 import Image, {StaticImageData} from "next/image";
 import {useAuth} from "../../../context/AuthContext";
 import { CircleFadingPlus } from 'lucide-react';
+import EditProfileSecondPicture from "@/app/components/EditProfileSecondPicture";
 
 
 interface ProfileSecondPictureProps {
@@ -36,9 +37,7 @@ function ProfileSecondPicture({color, image, pageId} : ProfileSecondPictureProps
                 {
                     user && user.id === pageId ? (
                         <div className={`absolute bottom-0 right-0`}>
-                            <div className={`-translate-x-[10px] -translate-y-[10px] w-[fit-content(100%)] h-[fit-content(100%)] px-1.5 py-1.5 hover:bg-primary-light-lg  rounded-full transition-all`}>
-                                <CircleFadingPlus strokeWidth={3} size={20} color={"var(--color-foreground)"} className={``} />
-                            </div>
+                            <EditProfileSecondPicture />
                         </div>
                     ) : null
                 }

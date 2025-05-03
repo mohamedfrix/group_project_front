@@ -2,14 +2,8 @@
 
 // context/AuthContext.js
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import User from "../model/UserModel";
 
-class User {
-    id: number;
-
-    constructor(id: number) {
-        this.id = id;
-    }
-}
 
 interface AuthContextType {
   user: null | User;
@@ -30,7 +24,16 @@ export function AuthProvider({ children } : {children : React.ReactNode}) {
     const makeAuth = async () => {
         try {
             setLoading(true);
-            setUser(new User(1));
+            setUser(new User(
+                1,
+                'Moulay',
+                'Bouabdelli',
+                'moulay.bouabdelli@ensia.edu.dz',
+                'Tiaret-Algeria',
+                '2027',
+                'National higher school of artificial intelligence',
+                'ENSIA'
+            ));
 
         }catch(err){
             console.log(err);

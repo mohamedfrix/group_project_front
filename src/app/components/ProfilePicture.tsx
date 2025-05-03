@@ -1,7 +1,7 @@
 'use client';
 
-import { CircleFadingPlus } from 'lucide-react';
 import {useAuth} from "../../../context/AuthContext";
+import EditProfilePicture from "@/app/components/EditProfilePicture";
 
 
 interface ProfilePictureProps {
@@ -19,7 +19,7 @@ function ProfilePicture ({pageId} : ProfilePictureProps) {
                     <div className={`bg-gray-primary w-full h-full rounded-full flex justify-center items-center`}>
                         {
                             user && user.id === pageId ? (
-                                <CircleFadingPlus strokeWidth={2} size={25} color={"var(--color-foreground)"} className={`translate-x-[2px]`} />
+                                <EditProfilePicture />
                             ) : null
                         }
                     </div>
