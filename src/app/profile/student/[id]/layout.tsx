@@ -2,22 +2,30 @@ import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
 import {AppSidebar} from "@/components/app-sidebar";
 import {ReactNode} from "react";
 import {AuthProvider} from "../../../../../context/AuthContext";
+import {UserProvider} from "../../../../../context/UserContext";
 
-function StudentProfileLayout ({children} : {
+
+function StudentProfileLayout ({children, params} : {
     children: ReactNode;
+    params: {id: number}
 }) {
+
+
     return (
         <>
             <AuthProvider>
-                <SidebarProvider>
-                    <AppSidebar />
-                    <div className={`w-full grid grid-rows-1 grid-cols-[fit-content(100%)_auto]`}>
-                        <SidebarTrigger className={`row-start-1 col-start-1`}/>
-                        <div className={`w-full row-start-1 col-start-2`}>
-                            {children}
+                <UserProvider userId={params.id} >
+                    <SidebarProvider>
+                        <AppSidebar />
+                        <div className={`w-full grid grid-rows-1 grid-cols-[fit-content(100%)_auto]`}>
+                            <SidebarTrigger className={`row-start-1 col-start-1`}/>
+                            <div className={`w-full row-start-1 col-start-2`}>
+                                {children}
+                            </div>
                         </div>
-                    </div>
-                </SidebarProvider>
+                    </SidebarProvider>
+                </UserProvider>
+
             </AuthProvider>
         </>
     );

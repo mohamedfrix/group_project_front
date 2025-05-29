@@ -6,16 +6,16 @@ import User from "../model/UserModel";
 
 
 interface AuthContextType {
-  user: null | User;
-  setUser: React.Dispatch<React.SetStateAction<null | User>>;
-  loading: boolean;
+  authUser: null | User;
+  setAuthUser: React.Dispatch<React.SetStateAction<null | User>>;
+  authLoading: boolean;
 }
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
 export function AuthProvider({ children } : {children : React.ReactNode}) {
-    const [user, setUser] = useState<User | null>(null);
-    const [loading, setLoading] = useState(true);
+    const [authUser, setAuthUser] = useState<User | null>(null);
+    const [authLoading, setAuthLoading] = useState(true);
 
     useEffect(() => {
         makeAuth().then(() => {});
@@ -23,8 +23,8 @@ export function AuthProvider({ children } : {children : React.ReactNode}) {
 
     const makeAuth = async () => {
         try {
-            setLoading(true);
-            setUser(new User(
+            setAuthLoading(true);
+            setAuthUser(new User(
                 1,
                 'Moulay',
                 'Bouabdelli',
@@ -38,12 +38,12 @@ export function AuthProvider({ children } : {children : React.ReactNode}) {
         }catch(err){
             console.log(err);
         }finally {
-            setLoading(false);
+            setAuthLoading(false);
         }
     }
 
     return (
-        <AuthContext.Provider value={{ user, setUser, loading }}>
+        <AuthContext.Provider value={{ authUser, setAuthUser, authLoading }}>
             {children}
         </AuthContext.Provider>
     );

@@ -1,8 +1,7 @@
 'use client'
 
 import ProfileSectionsTab from "@/app/components/ProfileSectionsTab";
-import {useEffect, useState} from "react";
-import {UserApiClient} from "../../../api-client/UserApiClient";
+import {useState} from "react";
 import ProfileSubSectionContent from "@/app/components/ProfileSubSectionContent";
 
 const sections = {
@@ -13,20 +12,9 @@ const sections = {
 
 
 
-function ProfileLowerSections({pageId} : {pageId?: number;}) {
+function ProfileLowerSections({editable} : {editable?: boolean;}) {
 
-    const [editable, setEditable] = useState<boolean>(false);
-    const user = UserApiClient.getUser(1);
     const [profileViewState, setProfileViewState] = useState<string>('view');
-
-    useEffect(() => {
-        if (user && user.id === pageId)
-            setEditable(true);
-        else
-            setEditable(false);
-    }, [pageId, user]);
-
-
     const [activeSection, setActiveSection] = useState<string>(Object.keys(sections)[0]);
 
     return (

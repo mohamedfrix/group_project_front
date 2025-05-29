@@ -1,16 +1,12 @@
-'use client';
 
-import {useAuth} from "../../../context/AuthContext";
 import EditProfilePicture from "@/app/components/EditProfilePicture";
 
 
 interface ProfilePictureProps {
-    pageId?: number;
+    editable?: boolean,
 }
 
-function ProfilePicture ({pageId} : ProfilePictureProps) {
-
-    const {user, loading} = useAuth();
+function ProfilePicture ({editable} : ProfilePictureProps) {
 
     return (
         <>
@@ -18,7 +14,7 @@ function ProfilePicture ({pageId} : ProfilePictureProps) {
                 <div className={`relative bg-light-primary rounded-full h-full w-full px-1 py-1 overflow-clip`}>
                     <div className={`bg-gray-primary w-full h-full rounded-full flex justify-center items-center`}>
                         {
-                            user && user.id === pageId ? (
+                            editable ? (
                                 <EditProfilePicture />
                             ) : null
                         }

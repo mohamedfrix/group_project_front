@@ -1,15 +1,13 @@
 'use client';
 
-import Image, {StaticImageData} from "next/image";
-import {useAuth} from "../../../context/AuthContext";
-import { CircleFadingPlus } from 'lucide-react';
+import  Image, {StaticImageData} from "next/image";
 import EditProfileSecondPicture from "@/app/components/EditProfileSecondPicture";
 
 
 interface ProfileSecondPictureProps {
     color?: ColorVariant,
     image?: StaticImageData,
-    pageId?: number,
+    editable?: boolean,
 }
 
 enum ColorVariant {
@@ -22,9 +20,8 @@ const colorVariantsClasses = {
     [ColorVariant.SECONDARY]: 'bg-secondary-light-lg'
 }
 
-function ProfileSecondPicture({color, image, pageId} : ProfileSecondPictureProps) {
+function ProfileSecondPicture({color, image, editable} : ProfileSecondPictureProps) {
 
-    const {user, loading} = useAuth();
 
     return (
         <>
@@ -35,7 +32,7 @@ function ProfileSecondPicture({color, image, pageId} : ProfileSecondPictureProps
                     }
                 </div>
                 {
-                    user && user.id === pageId ? (
+                    editable ? (
                         <div className={`absolute bottom-0 right-0`}>
                             <EditProfileSecondPicture />
                         </div>

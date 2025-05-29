@@ -16,7 +16,7 @@ import {UserApiClient} from "../../../api-client/UserApiClient";
 
 function ProfileSubSectionContent({state} : {state: string}) {
 
-    const [profileContent, setProfileContent] = useState<{ content: Array<{ name?: string }> } | null>({ content: [] });
+    const [profileContent, setProfileContent] = useState<{ content: Array<{ name?: string; components?: Array<{type: string; size: string; weight: string; color: string; value: string}>}> } | null>({ content: [] });
     const [profileSections, setProfileSections] = useState<string[]>([]);
     
     const sideBar = useSidebar();
