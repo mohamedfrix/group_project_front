@@ -1,0 +1,359 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f9fafb;
+}
+
+.container {
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+
+.card {
+  background: white;
+  border-radius: 12px;
+  border: 3px solid #0F8486;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+
+.grid {
+  display: grid;
+  gap: 45px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.progress-bar {
+  background: #e5e7eb;
+  border-radius: 999px;
+  height: 16px;
+  margin-top: 8px;
+}
+
+.progress-bar-inner {
+  background: #0F8486;
+  height: 100%;
+  border-radius: 999px;
+  width: 35%;
+}
+
+.check-icon {
+  color: green;
+  width: 16px;
+  height: 16px;
+}
+
+
+.activity {
+  flex: 1;
+  min-width: 220px;
+  margin-right: 30px;
+}
+
+.btn{
+  margin-top: 28px;
+  background-color: #0F8486;
+  color: #e5e7eb;
+  border: 2px solid #0F8486;
+  border-radius: 12px;
+  padding: 5px 14px 5px 14px;
+}
+
+.btn:hover{
+  background-color:#0f8486b3;
+  cursor: pointer;
+  padding: 6px 15px 6px 15px;
+}
+
+.trash-icon{
+  color: red;
+  height: 17px;
+  width: 17px;
+  margin-left: 10px;
+}
+
+.trash-icon:hover{
+  cursor: pointer;
+}
+
+
+.flex-row {
+  display: flex;
+  gap: 38px;
+  margin-left: 30px;
+  max-width: fit-content;
+}
+
+.flex-column {
+  display:flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ListStructure{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 8px;
+}
+
+.step-editable {
+  flex-grow: 1;
+  border: 2px solid #0F8486;
+  border-radius: 6px;
+  padding: 8px;
+  min-height: 36px;
+  font-size: 14px;
+  outline: none;
+}
+
+.editable-box{
+ min-height: 250px;
+}
+
+.step-text.done {
+  text-decoration: line-through;
+  color: #0F8486;
+}
+
+.edit-icon{
+ margin-left: 200px;
+ height: 17px;
+ width: 17px;
+}
+
+.Deadlinetitle{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.simple-input{
+  margin-top: 30px;
+}
+
+.descriptionCnt{
+  display: flex;
+  gap: 220px;
+}
+
+.editable {
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.editable:hover {
+  background-color: #f0f0f0;
+}
+
+.editable-box {
+  border: 1px solid #0F8486;
+  border-radius: 6px;
+  padding: 10px;
+  min-height: 10px;
+  font-size: 1rem;
+}
+
+.editable-box:focus{
+  min-height: 10px;
+  border: 1px solid #0F8486;
+}
+
+
+/*Team Page CSS*/
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: #e0e2e5; 
+  color: white;
+  padding: 1rem;
+}
+
+.main-content {
+  flex: 1;
+  background: #f9fafb;
+}
+
+
+
+/*Add Member Page*/
+.AddTitle{
+  margin-left: 60px;
+  margin-bottom: 40px;
+}
+.addPageHeader{
+  margin-left: 90px;
+}
+
+.addPageHeader input {
+ border: 2px solid #0F8486;
+ border-radius: 10px;
+ height: 38px;
+ width: 310px;
+
+}
+
+.roole{
+  border: 2px solid #0F8486;
+ border-radius: 10px;
+ height: 36px;
+ width: 290px;
+}
+
+
+textarea{
+  border: 2px solid #0F8486;
+ border-radius: 10px;
+ height: 70px;
+ width: 310px;
+}
+
+
+.Box{
+  margin-bottom: 30px;
+}
+
+.labeladd{
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.submit button{
+  margin-left: 700px;
+  background-color: #0F8486;
+  color: #e5e7eb;
+  border: 2px solid #0F8486;
+  border-radius: 12px;
+  padding: 8px 25px 8px 25px;
+  
+}
+
+.submit button:hover{
+  cursor: pointer;
+  background-color: #0b7fb5ca;
+  border: 2px solid #0b7fb5ca;
+  padding: 8px 25px 8px 25px;
+}
+
+
+/*Search Page*/
+
+.searchTitle{
+  margin-left: 50px;
+}
+
+.relative{
+  margin-left: 5%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.center-message{
+  margin-top: 20%;
+  margin-left: 29%;
+  margin-bottom:5% ;
+  font-size: 30px;
+  color: rgb(138, 139, 139);
+}
+
+
+.removeDescriptionBtn{
+  width: 5px;
+  height: 5px;
+}
+
+.SearchBar input{
+  margin-left: 30%;
+  border-radius: 15px;
+  border: 2px, solid #0F8486;
+  background-color: #D9D9D9;
+  width: 400px;
+  height: 100px;
+  padding-left: 10px ;
+  margin-bottom: 40px;
+}
+
+.SearchBar{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.relative button{
+  background-color: #0F8486;
+  color: #e5e7eb;
+  border: 2px solid #0F8486;
+  border-radius: 12px;
+  padding: 8px;
+}
+.description-tag{
+  background-color: #0F8486;
+  color: #e5e7eb;
+  border: 2px solid #0F8486;
+  border-radius: 12px;
+  padding: 3px 8px 3px 8px ;
+  font-size: 14px;
+
+}
+
+.tag-close {
+  background: transparent;
+  color: #fff;
+  font-size: 10px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+
+.Keywords:hover{
+  cursor: pointer;
+  background-color: #168486cb;
+  color: #e5e7eb;
+  border: 2px solid #168486cb;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.Keywords{
+  font-weight: 600;
+}
+
+
+
+

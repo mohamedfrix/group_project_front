@@ -1,0 +1,43 @@
+
+.team-card {
+  border: 2px solid;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  width: 160px;
+  text-align: center;
+}
+
+.avatar {
+  background-color: #e5e7eb;
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  margin: 0 auto 0.5rem;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.role {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.email {
+  font-size: 0.75rem;
+  color: #000000;
+  display: block;
+  margin-top: 0.25rem;
+  text-decoration: none;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 14px;
+  color: #0F8486;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  margin-top: 0.5rem;
+}
