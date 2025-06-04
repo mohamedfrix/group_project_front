@@ -1,0 +1,59 @@
+.sidebar {
+  background-color: #f9fafb;
+  width: 200px;
+  min-height: 100vh;
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #e5e7eb;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  padding: 0.95rem;
+  border-radius: 0.375rem;
+
+}
+
+.sidebar-item:hover {
+  background-color: #e0f2fe;
+}
+
+.sidebar-item.active {
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+  color: white;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.9rem;
+}
+.label:active{
+    color:#374151;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  box-shadow: none;
+  color: inherit;
+}
